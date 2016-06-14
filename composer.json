@@ -9,7 +9,7 @@
       "email": "hquijada@edesarrollos.com"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "version": "0.1.0",
   "require": {
     "guzzlehttp/guzzle": "^6.2"
@@ -17,6 +17,11 @@
   "autoload": {
     "psr-4": {
       "esms\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
     }
   }
 }
