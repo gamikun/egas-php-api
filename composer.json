@@ -9,6 +9,7 @@
       "email": "hquijada@edesarrollos.com"
     }
   ],
+  "minimum-stability": "stable",
   "version": "0.1.0",
   "require": {
     "guzzlehttp/guzzle": "^6.2"
