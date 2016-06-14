@@ -1,12 +1,15 @@
 {
   "name": "edesarrollos/esms",
   "description": "Cliente para eSms",
+  "homepage": "http://esms.edesarrollos.info/",
+  "type": "library",
   "authors": [
     {
       "name": "Hugo Quijada",
       "email": "hquijada@edesarrollos.com"
     }
   ],
+  "version": "0.1.0",
   "require": {
     "guzzlehttp/guzzle": "^6.2"
   },
