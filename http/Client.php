@@ -2,8 +2,6 @@
 
 namespace esms\http;
 
-use esms\http\Http;
-
 class Client extends Http {
 
   const API_URL = "http://esms.edesarrollos.info";

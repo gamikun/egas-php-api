@@ -3,14 +3,14 @@
   "description": "Cliente para eSms",
   "homepage": "http://esms.edesarrollos.info/",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Hugo Quijada",
       "email": "hquijada@edesarrollos.com"
     }
   ],
-  "minimum-stability": "stable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "require": {
     "guzzlehttp/guzzle": "^6.2"
   },
