@@ -4,7 +4,7 @@ namespace esms\http;
 
 class Client extends Http {
 
-  const API_URL = "http://esms.edesarrollos.info";
+  const API_URL = "http://esms.edesarrollos.info/";
 
   private $esms_uri_crear = "v1/mensajes/crear-mensaje";
   private $esms_uri_obtener = "v1/mensajes/obtener";

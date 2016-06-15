@@ -10,13 +10,21 @@
       "email": "hquijada@edesarrollos.com"
     }
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "require": {
     "guzzlehttp/guzzle": "^6.2"
+  },
+  "replace": {
+    "edesarrollos/esms": "self.version"
   },
   "autoload": {
     "psr-4": {
       "esms\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
     }
   }
 }
