@@ -1,6 +1,6 @@
 <?php
 
-namespace esms;
+namespace esms\http;
 
 use esms\http\Http;
 
