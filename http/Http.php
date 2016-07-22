@@ -155,9 +155,12 @@ class Http {
     $options = [
       "headers" => $this->_headers,
       "query" => $this->_query,
-      "form_params" => $this->_formParams,
+      "body" => $this->_formParams,
     ];
-    $resp = $this->getRequest()->request($this->_method, $this->_uri, $options);
+    $fullURL = "{$this->_url}{$this->_uri}";
+    $client = $this->getRequest();
+    $request = $client->createRequest($this->_method, $fullURL, $options);
+    $resp = $client->send($request);
     if($this->_asArray) {
       return json_decode($resp->getBody());
     }
