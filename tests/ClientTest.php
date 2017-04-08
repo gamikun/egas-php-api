@@ -1,32 +1,29 @@
 <?php
 
-namespace esms\Tests;
+namespace edesarrollos\egas\Tests;
 
-use esms\http\Client;
+use \edesarrollos\egas;
 
 class ClientTest extends \PHPUnit_Framework_TestCase {
 
-    const TOKEN = "c-vfp3hudNNrF0ecPYTp8QgCYElSm9qU0QlGJHklWruV4TBcB1FmVnRMiUpZN4CF";
-    const SECRET = "XnQs-fZUu_X-aVAFR8UVYWNW0VQNcFeh_YKXD0ZMsrWXdax-S-1Ur8pN0prVBkPr";
-    const TARGET = "6621207135";
+    private $config;
 
-    public function testSendMessage() {
-        $client = new Client(self::TOKEN, self::SECRET);
-        $response = $client->enviarMensaje(self::TARGET, 'El fin del mundose acerca!');
-        $this->objectHasAttribute('success', $response);
-        $this->assertTrue($response->success);
-        $this->objectHasAttribute('mensaje', $response);
-        $this->objectHasAttribute('id', $response->mensaje);
-        $this->assertGreaterThan(0, $response->mensaje->id);
+    public function setUp() {
+        $this->config = require(__DIR__ . '/config.php');
     }
 
-    public function testObtain() {
-        $client = new Client(self::TOKEN, self::SECRET);
-        $response = $client->obtener();
-        $this->assertObjectHasAttribute('success', $response);
-        $this->assertTrue($response->success);
-        $this->assertObjectHasAttribute('mensajes', $response);
-        $this->assertTrue(is_array($response->mensajes));
+    public function testLoadVariables() {
+        $client = new egas\Client();
+        $client->baseURL = $this->config['baseURL'];
+        $variables = $client->loadVariables();
+        $this->assertNotEmpty($variables);
     }
 
+    public function testLoadPrices() {
+    	$client = new egas\Client;
+    	$client->baseURL = $this->config['baseURL'];
+    	$prices = $client->loadPricing();
+    	$this->assertGreaterThan(0, $prices->perKilogram);
+    	$this->assertGreaterThan(0, $prices->perLitter);
+    }
 }
