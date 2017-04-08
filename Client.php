@@ -6,7 +6,7 @@ class Client {
 
     private static $sharedInstance = null;
 
-    public $baseURL = "http://app.hermogas.com/v1";
+    public $baseURL = "http://dummy.epedido.com/v1";
 
     public function loadVariables() {
         $url = "{$this->baseURL}/variable";
