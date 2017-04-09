@@ -6,6 +6,7 @@ class Pricing {
 
 	public $perKilogram;
 	public $perLitter;
+	public $perLitterAlternative;
 
 	public static function fromVariablesList($list) {
 		$price = new Pricing;
@@ -15,6 +16,8 @@ class Pricing {
 				$price->perKilogram = floatval($value);
 			} elseif ($name === 'PRECIO_LITRO') {
 				$price->perLitter = floatval($value);
+			} elseif ($name === 'PRECIO_LITRO_ALTERNO') {
+				$price->perLitterAlternative = floatval($value);
 			}
 		}
 
