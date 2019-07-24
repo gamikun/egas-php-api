@@ -1,6 +1,6 @@
 <?php
 
-namespace edesarrollos\egas;
+namespace egas\client;
 
 class Client {
 
