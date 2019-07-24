@@ -1,7 +1,7 @@
 {
-  "name": "edesarrollos/egas-client",
+  "name": "egas/client",
   "description": "Cliente para eGas",
-  "homepage": "http://www.edesarrollos.com/",
+  "homepage": "http://www.egasmexico.com/",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -10,7 +10,7 @@
       "email": "gespinoza@edesarrollos.com"
     }
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "require": {
     
   },
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "edesarrollos\\egas\\": ""
+      "egas\\client\\": ""
     }
   },
   "extra": {
